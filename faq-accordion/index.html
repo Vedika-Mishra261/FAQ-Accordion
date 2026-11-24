@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c4a6e">
+  <meta name="description" content="A simple and responsive FAQ accordion built with HTML, CSS, and JavaScript.">
+  <title>FAQ Accordion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="faq-section" aria-labelledby="faq-title">
+      <header class="faq-header">
+        <h1 id="faq-title">Frequently Asked Questions</h1>
+        <p class="faq-subtitle">
+          Find quick answers about this project, the accordion, and common internship interview questions.
+        </p>
+      </header>
+
+      <div class="faq-list">
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-1" type="button" aria-expanded="false" aria-controls="answer-1">
+              <span>What is this website about?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-1" role="region" aria-labelledby="question-1">
+            <p>This website is a simple FAQ accordion built with HTML, CSS, and JavaScript. It shows how questions can be expanded and collapsed with a click.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-2" type="button" aria-expanded="false" aria-controls="answer-2">
+              <span>How can I create an account?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-2" role="region" aria-labelledby="question-2">
+            <p>On a real website, you would select Sign Up, enter your name, email, and password, and then confirm the form. This project is a front-end demo, so it does not store any user data.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-3" type="button" aria-expanded="false" aria-controls="answer-3">
+              <span>How can I apply for an internship?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-3" role="region" aria-labelledby="question-3">
+            <p>Browse the open roles, read the requirements carefully, and submit your application with an updated resume and a short introduction. Shortlisted candidates are usually contacted by the hiring team.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-4" type="button" aria-expanded="false" aria-controls="answer-4">
+              <span>What technologies are used in this project?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-4" role="region" aria-labelledby="question-4">
+            <p>The project uses HTML5 for structure, CSS3 for styling and responsiveness, and plain JavaScript for click events and class changes. No frameworks or external libraries are used.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-5" type="button" aria-expanded="false" aria-controls="answer-5">
+              <span>Is this project beginner-friendly?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-5" role="region" aria-labelledby="question-5">
+            <p>Yes. The code is split into three small files, uses meaningful class names, and keeps the JavaScript logic simple. It is a good practice project for learning DOM manipulation.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-6" type="button" aria-expanded="false" aria-controls="answer-6">
+              <span>How does the FAQ accordion work?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-6" role="region" aria-labelledby="question-6">
+            <p>Each question is a button with a click event. When clicked, JavaScript adds or removes an active class, updates the ARIA state, and changes the answer height so it opens or closes smoothly.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-7" type="button" aria-expanded="false" aria-controls="answer-7">
+              <span>Can multiple questions be opened at once?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-7" role="region" aria-labelledby="question-7">
+            <p>No. This version follows the classic accordion pattern: only one answer stays open at a time. Opening another question closes the previous one, and clicking an open question closes it.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-8" type="button" aria-expanded="false" aria-controls="answer-8">
+              <span>Is the website responsive?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-8" role="region" aria-labelledby="question-8">
+            <p>Yes. The layout uses a flexible container, relative units, and a media query for smaller screens. It fits desktop, tablet, and mobile widths without horizontal scrolling.</p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-9" type="button" aria-expanded="false" aria-controls="answer-9">
+              <span>How do you validate positive numbers?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-9" role="region" aria-labelledby="question-9">
+            <p>Convert the input to a number, then check that it is a valid number and greater than zero.</p>
+            <pre><code>const height = Number(input.value);
+
+if (Number.isFinite(height) &amp;&amp; height &gt; 0) {
+  console.log("Valid height");
+}</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-10" type="button" aria-expanded="false" aria-controls="answer-10">
+              <span>How does JavaScript handle decimal numbers?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-10" role="region" aria-labelledby="question-10">
+            <p>JavaScript has one main <code>Number</code> type for whole and decimal numbers. Decimals use floating-point values, so small rounding errors can happen. For example, <code>0.1 + 0.2</code> may print as <code>0.30000000000000004</code>. Round the result when needed.</p>
+            <pre><code>const total = Math.round((0.1 + 0.2) * 100) / 100;</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-11" type="button" aria-expanded="false" aria-controls="answer-11">
+              <span>How would you display different messages based on a value?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-11" role="region" aria-labelledby="question-11">
+            <p>Use <code>if</code>, <code>else if</code>, and <code>else</code> to show the message that matches the value.</p>
+            <pre><code>let message;
+
+if (bmi &lt; 18.5) {
+  message = "Underweight";
+} else if (bmi &lt; 25) {
+  message = "Normal";
+} else {
+  message = "Above normal";
+}</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-12" type="button" aria-expanded="false" aria-controls="answer-12">
+              <span>Why should eval() be avoided?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-12" role="region" aria-labelledby="question-12">
+            <p><code>eval()</code> runs a string as JavaScript code. It is unsafe with user input, harder to debug, and slower than normal code. Use <code>Number()</code> and operators instead.</p>
+            <pre><code>const result = Number(a) + Number(b);</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-13" type="button" aria-expanded="false" aria-controls="answer-13">
+              <span>How would you store calculator state?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-13" role="region" aria-labelledby="question-13">
+            <p>Keep the current number, previous number, and selected operator in one object or in separate variables. Update the object after every button click.</p>
+            <pre><code>const state = {
+  current: "",
+  previous: "",
+  operator: ""
+};</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-14" type="button" aria-expanded="false" aria-controls="answer-14">
+              <span>How should divide-by-zero be handled?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-14" role="region" aria-labelledby="question-14">
+            <p>Check the second number before dividing. Show a friendly message instead of allowing <code>Infinity</code> in the display.</p>
+            <pre><code>if (b === 0) {
+  display.value = "Cannot divide by zero";
+} else {
+  display.value = String(a / b);
+}</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-15" type="button" aria-expanded="false" aria-controls="answer-15">
+              <span>How does Math.random() work?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-15" role="region" aria-labelledby="question-15">
+            <p><code>Math.random()</code> returns a decimal from 0 up to, but not including, 1. Multiply it by the array length and use <code>Math.floor()</code> to get a valid index.</p>
+            <pre><code>const index = Math.floor(Math.random() * quotes.length);</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-16" type="button" aria-expanded="false" aria-controls="answer-16">
+              <span>How would you store multiple quotes?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-16" role="region" aria-labelledby="question-16">
+            <p>Use an array of objects. Each object can hold the quote text and its author.</p>
+            <pre><code>const quotes = [
+  { text: "Keep learning every day.", author: "Unknown" },
+  { text: "Small steps make big results.", author: "Unknown" }
+];</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-17" type="button" aria-expanded="false" aria-controls="answer-17">
+              <span>How can you prevent immediate duplicate quotes?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-17" role="region" aria-labelledby="question-17">
+            <p>Remember the last index and choose a new one until it is different. This works when the array has more than one quote.</p>
+            <pre><code>let lastIndex = -1;
+let index;
+
+do {
+  index = Math.floor(Math.random() * quotes.length);
+} while (quotes.length &gt; 1 &amp;&amp; index === lastIndex);
+
+lastIndex = index;</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-18" type="button" aria-expanded="false" aria-controls="answer-18">
+              <span>Why is alt text important?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-18" role="region" aria-labelledby="question-18">
+            <p>Alt text describes an image for screen readers and appears when an image cannot load. It also helps search engines understand the image. Use <code>alt=""</code> only for decorative images.</p>
+            <pre><code>&lt;img src="gallery-1.jpg" alt="Blue mountain lake at sunrise"&gt;</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-19" type="button" aria-expanded="false" aria-controls="answer-19">
+              <span>What is a CSS Grid?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-19" role="region" aria-labelledby="question-19">
+            <p>CSS Grid is a layout system that arranges items in rows and columns. It is useful for an image gallery because the images can sit in equal columns and wrap on smaller screens.</p>
+            <pre><code>.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}</code></pre>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-heading">
+            <button class="faq-question" id="question-20" type="button" aria-expanded="false" aria-controls="answer-20">
+              <span>How can JavaScript show and hide an element?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+          </h2>
+          <div class="faq-answer" id="answer-20" role="region" aria-labelledby="question-20">
+            <p>Toggle a CSS class with JavaScript and let CSS control visibility. For example, a <code>.hidden</code> class can use <code>display: none</code>.</p>
+            <pre><code>lightbox.addEventListener("click", () =&gt; {
+  image.classList.toggle("hidden");
+});</code></pre>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
