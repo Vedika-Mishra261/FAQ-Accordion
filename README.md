@@ -1,4 +1,4 @@
- FAQ Accordion
+# FAQ Accordion
 
 A simple, responsive FAQ accordion built with HTML5, CSS3, and plain JavaScript. It contains 20 questions in one clean list: general FAQ questions and internship interview questions with short answers and JavaScript examples.
 
